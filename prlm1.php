@@ -86,7 +86,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php $name; ?></title>
+    <title><?php echo $name; ?></title>
     <style>
       body {
         margin: 0;
@@ -211,7 +211,7 @@
             <td><?php echo $stock[0]; ?></td>
             <td><?php echo $labels[$level[0]]; ?></td> 
             <td><?php echo $order_qty[0]; ?></td>
-            <td class="<?php echo $classes[$level[0]]; ?>">&#8369;<?php echo $line_total[0]; ?></td>
+            <td class="<?php echo $classes[$level[0]]; ?>"><?php echo $labels[$level[0]]; ?></td>
           </tr>
           <tr>
             <td><?php echo $product_names[1]; ?></td>
@@ -287,14 +287,15 @@
           </tr>
         </tbody>
       </table>
-    </div>
-    
-<p>Subtotal: &#8369;<?php echo $subtotal; ?></p>
+      <p class="subtotal">Subtotal: &#8369;<?php echo $subtotal; ?></p>
   </div>
     
 
     <!-- Footer Here -->
      <footer><?php echo $name . " " . $city . " City";?>
     </footer>
+    </div>
+    
+
 </body>
 </html>
